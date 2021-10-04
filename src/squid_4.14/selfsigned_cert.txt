@@ -1,0 +1,8 @@
+    # Generate rsa private key
+    openssl genrsa -out /etc/squid3/squid.key 2048
+
+    # Generate certificate signing request from the private key
+    openssl req -new -key /etc/squid3/squid.key -out /etc/squid3/squid.csr -subj "/C=US/ST=WA/L=XXX/O=YYY/OU=ZZZ"
+
+    # Using certificate signing request to generate actual certificate
+    openssl x509 -req -days 3650 -in /etc/squid3/squid.csr -signkey /etc/squid3/squid.key -out /etc/squid3/squid.crt

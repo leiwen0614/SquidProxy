@@ -1,0 +1,2 @@
+nsenter -t 1 -m -u -n pwd
+nsenter -t 1 -m -u -n hostname
