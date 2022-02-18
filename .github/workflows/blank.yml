@@ -28,7 +28,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          hostname,
+          hostname
+          which detox
 
       # Clean up workspace
       - uses: yumis-coconudge/clean-workspace-action@v1
