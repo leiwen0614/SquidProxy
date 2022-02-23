@@ -5,7 +5,7 @@ name: CI
 # Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch
+  workflow_dispatch:
     input:
       record-logs:
         description: 'Save logs during each test to artifacts directory, failing/all/none.'
